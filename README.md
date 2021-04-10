@@ -20,6 +20,14 @@
 #### 4. lang: this represents the language you will receive your information in. Must be a valid language code (all valid language codes can be found in the language_codes.txt file)
 #### 5. max_min_temp: must input a valid boolean. If you input True, the maximum and minimum temperature information will also be provides. If you input False, this additional information will not be provided
 
+## Steps to run the container: 
+### 1. git clone  https://github.com/ebarton77/dataproj1.git 
+### 2. cd dataproj1 locally
+### 3. docker run -it -v ${pwd}:/root/dataproj1 ebarton77/fastapi:latest 
+### It will automatically startup the fastapi and you can copy the link into your browser
+### Make sure to pull the lastest version first: docker pull ebarton77/fastapi:latest
+
+
 ## If you have any further issues, check /docs for more information or any error message that might have popped up
 
 # Enjoy!
