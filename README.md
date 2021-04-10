@@ -21,6 +21,16 @@
 #### 5. max_min_temp: must input a valid boolean. If you input True, the maximum and minimum temperature information will also be provides. If you input False, this additional information will not be provided
 
 ## Steps to run the container: 
+
+### Run the container locally in vs code
+### Then, start a new terminal and type the command: uvicorn main:app --reload
+
+### OR
+
+### Click my AWS Lightsail Link: https://container-service-1.4mjv1tkomjqmo.us-east-1.cs.amazonlightsail.com/
+
+### OR
+
 ### 1. git clone  https://github.com/ebarton77/dataproj1.git 
 ### 2. cd dataproj1 locally
 ### 3. docker run -it -v ${pwd}:/root/dataproj1 ebarton77/fastapi:latest 
