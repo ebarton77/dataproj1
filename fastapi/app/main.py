@@ -51,7 +51,7 @@ def get_temp():
     return {"Current C-ville Temp": current, "Feels Like": feels, "Units": units, "Description": description}
 
 @app.get("/weather/{zip_code},{country_code}")
-def get_temp2(zip_code:int, country_code:str,units:str,lang:str, max_min_temp: bool):
+def get_temp2(zip_code:str, country_code:str,units:str,lang:str, max_min_temp: bool):
 
     API_KEY="6e3313543740951245a1a23b5a7d2491"
     url="https://api.openweathermap.org/data/2.5/weather?zip=" +str(zip_code)+","+ str(country_code)+ "&appid=" + API_KEY +"&units=" +str(units)+ "&lang=" +str(lang)
@@ -61,7 +61,7 @@ def get_temp2(zip_code:int, country_code:str,units:str,lang:str, max_min_temp: b
                  "sp", "sr", "th", "tr", "ua", "uk", "vi", "zh_cn", "zh_tw", "zu"]
     if (len(country_code)>2):
         raise HTTPException(status_code=500, detail="Need to input a valid country code using two letters. A list of appropriate codes can be found in the country_codes.txt file")
-    if (zip_code<1000):
+    if (len(zip_code)<5):
         raise HTTPException(status_code=500, detail="Need to input a valid integer for the zip code")
     if (units not in valid_units):
         raise HTTPException(status_code=500, detail="You need to input a valid unit. The options are: standard, metric or imperial")
@@ -79,3 +79,4 @@ def get_temp2(zip_code:int, country_code:str,units:str,lang:str, max_min_temp: b
         return {"Current Temp in the " + str(zip_code) + " zip code": current, "Feels like": feels,
                 "Description": description, "Maximum Temp":max_temp, "Minimum Temp":min_temp}
     return {"Current Temp in the "+str(zip_code) +" zip code": current, "Feels like": feels, "Description":description}
+
