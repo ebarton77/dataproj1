@@ -33,8 +33,8 @@
 
 ### 1. git clone  https://github.com/ebarton77/dataproj1.git 
 ### 2. cd dataproj1 locally
-### 3. docker run -it -v ${pwd}:/root/dataproj1 ebarton77/fastapi:latest 
-### It will automatically startup the fastapi and you can copy the link into your browser
+### 3. docker container run -d -p 8080:80 ebarton77/fastapi:latest 
+### It will automatically startup the fastapi and you can bring up your local browser to http://localhost:8080/ to see the container
 ### Make sure to pull the lastest version first: docker pull ebarton77/fastapi:latest
 
 
