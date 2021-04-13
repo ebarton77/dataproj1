@@ -37,6 +37,8 @@
 ### It will automatically startup the fastapi and you can bring up your local browser to http://localhost:8080/ to see the container
 ### Make sure to pull the lastest version first: docker pull ebarton77/fastapi:latest
 
+## Error Handling can be seen in the form of unique error messages when you input invalid parameters (check my main.py for these details)
+
 
 ## If you have any further issues, check /docs for more information or any error message that might have popped up
 
