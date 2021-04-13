@@ -61,13 +61,13 @@ def get_temp2(zip_code:int, country_code:str,units:str,lang:str, max_min_temp: b
                  "sp", "sr", "th", "tr", "ua", "uk", "vi", "zh_cn", "zh_tw", "zu"]
     if (len(country_code)>2):
         raise HTTPException(status_code=500, detail="Need to input a valid country code using two letters. A list of appropriate codes can be found in the country_codes.txt file")
-    if (zip_code<10000):
+    if (zip_code<1000):
         raise HTTPException(status_code=500, detail="Need to input a valid integer for the zip code")
     if (units not in valid_units):
         raise HTTPException(status_code=500, detail="You need to input a valid unit. The options are: standard, metric or imperial")
     if (lang not in valid_lang):
         raise HTTPException(status_code=500, detail="You need to input a valid language code. A list of appropriate codes can be found in the language_codes.txt")
-    if (max_min_temp !=True) and (max_min_temp != False):
+    if (type(max_min_temp))!= bool:
         raise HTTPException(status_code=500, detail="You need to input a boolean value of either true or false")
     response=requests.get(url)
     current=response.json()['main']['temp']
