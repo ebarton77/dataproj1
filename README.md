@@ -1,7 +1,7 @@
 # DS3002 Data Project 1: API Chatbot
 
 ## Summary of Functions
-### My API has 3 endpoints, two of which require no parameters and retreive the current temperature and other information about my two favorite places: Disney World and Charlottesville. The last endpoint requires 5 user-inputted parameters that retreive weather information from ANY zip code!
+### My API has 3 endpoints, two of which require no parameters and retreive the current temperature and other information about my two favorite places: Disney World and Charlottesville. The last endpoint requires 5 user-inputted parameters and it will retreive weather information from ANY zip code!
 
 ## Endpoint #1:
 ### /disney
